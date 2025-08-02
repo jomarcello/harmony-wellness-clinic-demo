@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-color: #059669;
+  --secondary-color: #047857;
+  --accent-color: #10b981;
+  --background: #ffffff;
+  --foreground: #1f2937;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Practice-specific branding */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.text-brand {
+  color: var(--primary-color);
+}
+
+.bg-brand {
+  background-color: var(--primary-color);
+}
+
+.border-brand {
+  border-color: var(--primary-color);
+}
